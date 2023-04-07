@@ -38,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.73623455, g: 0.8793107, b: 1.0493252, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,8 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_LightingSettings: {fileID: 4890085278179872738, guid: ea11faeeb7a904a15977fba6d782a60d,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,6 +119,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -133,6 +136,10 @@ PrefabInstance:
       value: Palm_01
       objectReference: {fileID: 0}
     - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 64.377
       objectReference: {fileID: 0}
@@ -143,6 +150,10 @@ PrefabInstance:
     - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.20282838
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8453878
       objectReference: {fileID: 0}
     - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
       propertyPath: m_LocalRotation.x
@@ -157,14 +168,6 @@ PrefabInstance:
       value: -0.023243748
       objectReference: {fileID: 0}
     - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.8453878
-      objectReference: {fileID: 0}
-    - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -5
       objectReference: {fileID: 0}
@@ -176,11 +179,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 23843777350365382, guid: cf92f64c366a83f42b7636e1086fec18,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8f90415a33e4b4b1d82e872a91f3ba26, type: 2}
     - target: {fileID: 205557823479122812, guid: cf92f64c366a83f42b7636e1086fec18,
         type: 3}
       propertyPath: m_LODs.Array.data[0].fadeTransitionWidth
@@ -222,7 +220,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -237,10 +235,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -265,6 +265,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &889300158
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -283,6 +284,7 @@ Transform:
   m_LocalRotation: {x: -0.08028589, y: 0, z: 0, w: 0.9967719}
   m_LocalPosition: {x: 67, y: 14.3, z: 88.52}
   m_LocalScale: {x: 9.7605, y: 9.7605, z: 37.13187}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -299,6 +301,10 @@ PrefabInstance:
       value: Palm_01 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 73.5
       objectReference: {fileID: 0}
@@ -309,6 +315,10 @@ PrefabInstance:
     - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.20282838
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8453878
       objectReference: {fileID: 0}
     - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
       propertyPath: m_LocalRotation.x
@@ -323,14 +333,6 @@ PrefabInstance:
       value: -0.023243748
       objectReference: {fileID: 0}
     - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.8453878
-      objectReference: {fileID: 0}
-    - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -5
       objectReference: {fileID: 0}
@@ -342,11 +344,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 23843777350365382, guid: cf92f64c366a83f42b7636e1086fec18,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b9397c6c85ab84eb695453bb3cfc31c6, type: 2}
     - target: {fileID: 205557823479122812, guid: cf92f64c366a83f42b7636e1086fec18,
         type: 3}
       propertyPath: m_LODs.Array.data[0].fadeTransitionWidth
@@ -389,7 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGlobal: 1
+  m_IsGlobal: 1
   priority: 0
   blendDistance: 0
   weight: 1
@@ -404,6 +401,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 67, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -420,7 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGlobal: 1
+  m_IsGlobal: 1
   priority: 0
   blendDistance: 0
   weight: 1
@@ -502,6 +500,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1393818868
@@ -514,6 +513,7 @@ Transform:
   m_LocalRotation: {x: 0.5302888, y: -0.43357447, z: 0.3644574, w: 0.6308548}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -530,7 +530,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 1
   m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1001 &1585077962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -541,6 +548,10 @@ PrefabInstance:
     - target: {fileID: 1402090239586902, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
       propertyPath: m_Name
       value: Palm_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -555,6 +566,10 @@ PrefabInstance:
       value: 0.20282838
       objectReference: {fileID: 0}
     - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8453878
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.03691044
       objectReference: {fileID: 0}
@@ -565,14 +580,6 @@ PrefabInstance:
     - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.023243748
-      objectReference: {fileID: 0}
-    - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.8453878
-      objectReference: {fileID: 0}
-    - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4590211134741006, guid: cf92f64c366a83f42b7636e1086fec18, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -586,11 +593,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 23843777350365382, guid: cf92f64c366a83f42b7636e1086fec18,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 44529ff351a2746a79a2a734887e5dbe, type: 2}
     - target: {fileID: 205557823479122812, guid: cf92f64c366a83f42b7636e1086fec18,
         type: 3}
       propertyPath: m_LODs.Array.data[0].fadeTransitionWidth
@@ -639,18 +641,20 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
-  m_CameraOutput: 0
   m_Cameras: []
   m_RendererIndex: 1
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
@@ -715,6 +719,7 @@ Transform:
   m_LocalRotation: {x: 0.024430618, y: 0.01134103, z: -0.0002771689, w: 0.9996372}
   m_LocalPosition: {x: 67.4, y: 5.76, z: -46.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -736,3 +741,15 @@ MonoBehaviour:
   axisBias: 0.5
   minScale: 0.5
   targetFramerate: 0
+  speedFormat: 1
+  loadingScreen:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  volumeManager:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  consoleCanvas: {fileID: 0}
